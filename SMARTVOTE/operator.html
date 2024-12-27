@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>SMARTVOTE</title>
+        <link href="css/operator.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="operator.html">SMART VOTE</a>
+            <!-- Sidebar Toggle-->
+            <div class="ms-auto me-4">
+                <button class="btn btn-link btn-sm" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            </div>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">
+                                <div class="profile-card" id="profileCard" style="display: none;">
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar me-3">
+                                            <span>😊</span> <!-- Emoji sebagai placeholder untuk wajah -->
+                                            <div class="status-indicator"></div>
+                                        </div>
+                                        <div class="profile-info">
+                                            <p class="profile-name" id="profileName"></p>
+                                            <p class="profile-role" id="profileRole"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="nav-link" href="operator.html" id="daftar-sidikjari">
+                                Daftar Sidik Jari
+                            </a>
+                            <a class="nav-link" href="operator.html" id="daftar-kandidat">
+                                Daftar Kandidat
+                            </a>
+                            <a class="nav-link" href="operator.html" id="hasil-suara">
+                                Hasil Suara
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">
+                            <button class="btn" id="logoutButton" style="font-size: 14px; width: 100%;">Keluar</button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <div class="main-content">
+                            <div class="table-responsive">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FORM INPUT OPERATOR -->
+                    <div class="box" id="form-box" style="display: none;">
+                        <h2>Daftar Kandidat</h2>
+                        <div class="mb-3">
+                            <label for="id-kandidat" class="form-label">ID Kandidat</label>
+                            <input type="text" class="form-control" id="id-kandidat" placeholder="Masukkan ID" name="id-kandidat">
+                        </div>
+                        <div class="mb-3 mt-3">
+                            <label for="nama-pengguna-kandidat" class="form-label">Nama Pengguna</label>
+                            <input type="text" class="form-control" id="nama-pengguna-kandidat" placeholder="Masukkan Nama Pengguna" name="nama-kandidat">
+                        </div>
+                        <div class="mb-3">
+                            <label for="kata-sandi-kandidat" class="form-label">Kata Sandi</label>
+                            <input type="text" class="form-control" id="kata-sandi-kandidat" placeholder="Masukkan Kata Sandi" name="kata-sandi">
+                        </div>
+                        <div class="mb-3">
+                            <label for="nama-kandidat" class="form-label">Nama Kandidat</label>
+                            <input type="text" class="form-control" id="nama-kandidat" placeholder="Masukkan Nama Kandidat" name="nama-kandidat">
+                        </div>
+                        <div class="mb-3">
+                            <label for="foto-profil-kandidat" class="form-label">Foto Profil</label>
+                            <input type="url" class="form-control" id="foto-profil-kandidat" placeholder="Masukkan Foto Profil" name="foto-profil-kandidat" accept="image/*">
+                        </div>
+                        <div class="mb-3">
+                            <label for="visiMisi-kandidat" class="form-label">Visi & Misi</label>
+                            <textarea class="form-control" id="visiMisi-kandidat" rows="3" placeholder="Masukkan Visi & Misi" name="visiMisi-kandidat"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="kandidat-jenis" class="form-label">Jenis Kandidat</label>
+                            <select class="form-select" id="kandidat-jenis" name="kandidat-jenis" required>
+                                <option value="">Pilih Jenis Kandidat</option>
+                                <option value="Ketua Umum MAPERWA">Ketua Umum MAPERWA</option>
+                                <option value="Presiden BEM">Presiden BEM</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary" id="submitKandidat">Tambah</button>
+                        </div>
+                    </div>
+                    <!-- FORM INPUT OPERATOR -->
+
+                    <!-- FORM DAFTAR SIDIK JARI -->
+                    <div class="box" id="form-box-sidikJari" style="display: none;">
+                        <h2>Daftar Sidik Jari</h2>
+                        <div class="mb-3 mt-3">
+                            <label for="id-sidikJari" class="form-label">ID</label>
+                            <input type="text" class="form-control" id="id-sidikJari" placeholder="Masukkan ID" name="id-sidikjari">
+                        </div>
+                        <div class="mb-3">
+                            <label for="nama-sidikJari" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="nama-sidikJari" placeholder="Masukkan Nama" name="nama-sidikJari">
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary" id="submitSidikJari">Tambah</button>
+                        </div>
+                    </div>
+                    <!-- FORM DAFTAR SIDIK JARI -->
+
+                    <!-- TOGGLE HASIL SUARA -->
+                    <!-- <div class="d-flex justify-content-end mb-3">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="toggleHasilSuara">
+                            <label class="form-check-label" for="toggleHasilSuara">Tampilkan Hasil Suara</label>
+                        </div>
+                    </div> -->
+                    <!-- TOGGLE HASIL SUARA -->
+
+                </main>                  
+
+                <!-- FOOTER -->
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; SmartVote 2024</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!-- FIREBASE WAJIB -->
+        <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app-compat.js"></script>
+        <!-- FIREBASE PILIHAN -->
+        <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-database-compat.js"></script>
+
+        <script src="js/firebase.js"></script>
+        <script src="js/operator.js"></script>
+        <script src="js/admin.js"></script>
+        
+        <!-- Gunakan satu library Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html>
