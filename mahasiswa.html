@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>SMARTVOTE</title>
+        <link href="css/mahasiswa.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="mahasiswa.html">SMART VOTE</a>
+            <!-- Sidebar Toggle-->
+            <div class="ms-auto me-4">
+                <button class="btn btn-link btn-sm" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            </div>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <!-- <div class="sb-sidenav-menu-heading">
+                                <div class="profile-card" id="profileCard">
+                                    <div class="avatar">
+                                        <span>😊</span>
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div class="profile-info">
+                                        <p class="profile-name" id="profileName"></p>
+                                        <p class="profile-role" id="profileRole"></p>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <a class="nav-link" href="mahasiswa.html" id="list-kandidat">
+                                List Kandidat
+                            </a>
+                            <a class="nav-link" href="mahasiswa.html" id="hasil-suara">
+                                Hasil Suara
+                            </a>
+                            <a class="nav-link" href="mahasiswa.html" id="login-mahasiswa">
+                                Login
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <div class="main-content">
+                            
+                            <!-- FORM LOGIN -->
+                            <div class="box-login" id="form-box-login" style="display: none;">
+                                <h2>Form Login</h2>
+                                <form id="formLogin">
+                                    <!-- <div class="mb-3">
+                                        <label for="loginID" class="form-label">ID</label>
+                                        <input type="text" class="form-control" id="loginID" placeholder="Masukkan Id" name="loginID">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="loginNama" class="form-label">Nama</label>
+                                        <input type="text" class="form-control" id="loginNama" placeholder="Masukkan Nama" name="loginNama">
+                                    </div> -->
+                                    <div class="mb-3">
+                                        <label for="loginUsername" class="form-label">Nama Pengguna</label>
+                                        <input type="text" class="form-control" id="loginUsername" placeholder="Masukkan Nama Pengguna" name="loginUsername">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="loginPassword" class="form-label">Kata Sandi</label>
+                                        <input type="password" class="form-control" id="loginPassword" placeholder="Masukkan Kata Sandi" name="loginPassword">
+                                    </div>
+                                    <div class="mb-3">
+                                        <button type="submit" class="btn btn-primary" id="submitOperator">Masuk</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- FORM LOGIN -->
+                        </div>
+                    </div>
+
+                    
+                </main>
+
+                <!-- FOOTER -->
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; SmartVote 2024</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!-- FIREBASE WAJIB -->
+        <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app-compat.js"></script>
+        <!-- FIREBASE PILIHAN -->
+        <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-database-compat.js"></script>
+
+        <script src="js/firebase.js"></script>
+        <script src="js/mahasiswa.js"></script>
+        <script src="js/admin.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
